@@ -1,0 +1,6 @@
+#!/bin/bash
+# backup minecraft
+/etc/init.d/minecraft backup
+# clean up older than 10 days
+find <%= @minecraft_backuppath %>/* -mtime +10 | xargs rm -r
+
